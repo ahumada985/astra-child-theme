@@ -14,24 +14,7 @@ Template: astra
    PERSONALIZACIÓN PUPPIESVET
    ======================================== */
 
-/* FORZAR mensaje visible en TODA la página - VERSIÓN EXTREMA */
-html::before {
-    content: "🔥 WP PUSHER NO FUNCIONA - TESTING MANUAL 🔥 VERSIÓN 2.0 🔥";
-    display: block !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    background: #ff0000 !important;
-    color: #ffffff !important;
-    font-size: 50px !important;
-    font-weight: 900 !important;
-    text-align: center !important;
-    z-index: 999999 !important;
-    padding-top: 300px !important;
-    line-height: 1.2 !important;
-}
+/* Tema limpio - Deploy automático funcionando correctamente */
 
 /* Asegurar que el fondo sea completamente blanco */
 .home body {
