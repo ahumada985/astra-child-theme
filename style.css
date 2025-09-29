@@ -33,3 +33,18 @@ Template: astra
 .home .site-header {
     display: block;
 }
+
+/* Ocultar imagen del perro en footer y página demo */
+img[src*="doggy.png"] {
+    display: none !important;
+}
+
+/* Ocultar cualquier widget de imagen del perro */
+.elementor-widget-image img[src*="doggy"] {
+    display: none !important;
+}
+
+/* Ocultar todo el footer con perro */
+.site-footer img[src*="doggy"] {
+    display: none !important;
+}
