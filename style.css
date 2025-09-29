@@ -14,8 +14,26 @@ Template: astra
    PERSONALIZACIÓN PUPPIESVET
    ======================================== */
 
-/* Ocultar todo el contenido de la página principal para dejarla en blanco */
-.home .site-content {
+/* Agregar texto de prueba en la página principal */
+.home .site-content::before {
+    content: "🎉 ¡HOLA! ESTA ES UNA PRUEBA DEL DEPLOY AUTOMÁTICO - FUNCIONA PERFECTAMENTE! 🚀";
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 20px;
+    border: 3px solid #4ecdc4;
+    border-radius: 10px;
+}
+
+/* Ocultar el contenido original pero mostrar nuestro texto */
+.home .site-content > * {
     display: none !important;
 }
 
