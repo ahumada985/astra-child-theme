@@ -37,6 +37,10 @@ function add_puppy_video() {
             video.autoplay = true;
             video.loop = true;
             video.muted = true;
+            video.playsInline = true;
+            video.controls = false;
+            video.setAttribute('webkit-playsinline', '');
+            video.setAttribute('playsinline', '');
             video.style.cssText = `
                 position: fixed;
                 top: 50%;
@@ -48,7 +52,16 @@ function add_puppy_video() {
                 border-radius: 15px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.3);
                 object-fit: cover;
+                background: #f0f0f0;
             `;
+
+            // Forzar reproducción después de cargar
+            video.addEventListener('loadeddata', function() {
+                video.play().catch(function(error) {
+                    console.log('Error al reproducir video:', error);
+                });
+            });
+
             document.body.appendChild(video);
         });
         </script>
